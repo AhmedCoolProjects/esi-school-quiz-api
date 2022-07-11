@@ -29,3 +29,13 @@ export async function addQuiz(req, res) {
   await moduleItem.save();
   res.send(moduleItem);
 }
+/**
+ *
+ * @param {string} moduleId
+ * @param {string} quizId
+ */
+export async function getQuizById(req, res, moduleId, quizId) {
+  const moduleItem = await moduleSubject.findById(moduleId);
+  const quiz = moduleItem.quiz.find((quiz) => quiz._id == quizId);
+  res.send(quiz);
+}
