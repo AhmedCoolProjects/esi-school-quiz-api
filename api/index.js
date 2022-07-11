@@ -13,8 +13,9 @@ app.use(
   cors({
     origin: [
       "http://localhost:3000",
-      "https://jina-enime.vercel.app",
-      "https://jina-enime.vercel.app/",
+      "https://esi-school-quiz.vercel.app",
+      "https://esi-school-quiz.vercel.app/",
+      "https://quiz.codeesi.com",
     ],
     methods: ["GET", "POST"],
   })
