@@ -29,11 +29,13 @@ import moduleSubject from "../models/ModuleSchema.js";
  *
  * @param {string} title
  * @param {string} description
+ * @param {string} image
  */
 export async function addModuleSubject(req, res) {
   const moduleSubjectItem = new moduleSubject({
     title: req.body.title,
     description: req.body.description,
+    image: req.body.image,
   });
   await moduleSubjectItem.save();
   res.send(moduleSubjectItem);
